@@ -183,13 +183,18 @@ li a {
   align-items: center;
   font-weight: bold;
   color: #161b5a;
+  text-decoration: none;
 }
 
-/* @media screen and (max-width: 800px) {
+.textAddress {
+  user-select: all;
+}
+
+@media screen and (max-width: 800px) {
   .page-wrapper {
     width: 95%;
   }
-} */
+}
 
 @media only screen and (max-width: 660px) {
 
