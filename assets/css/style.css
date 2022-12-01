@@ -72,7 +72,7 @@ li a {
 }
 
 .page-wrapper {
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 0.5fr;
   grid-template-areas: "about-section"
@@ -106,6 +106,9 @@ li a {
   color: #3d416f;
 }
 
+.content p {
+  margin: 10px;
+}
 #work .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -153,7 +156,7 @@ li a {
   justify-content: start;
   align-items: end;
   padding: 1em 0;
-  box-shadow: inset 0 0 0 150px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
 
@@ -182,11 +185,11 @@ li a {
   color: #161b5a;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .page-wrapper {
     width: 95%;
   }
-}
+} */
 
 @media screen and (max-width: 660px) {
   .mainHeader {
@@ -206,10 +209,9 @@ li a {
   }
 
   .page-section {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    margin: 20px 10px;
   }
 
   .page-section h2{
