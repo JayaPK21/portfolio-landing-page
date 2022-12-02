@@ -1,3 +1,4 @@
+/* This root selector contains all the CSS variables required to provide colors to different elements in this website. */
 :root {
   --headingBgColor: #332d2d;
   --pageThemeColor: #9ea5ed;
@@ -10,6 +11,7 @@
   box-sizing: border-box;
 }
 
+/* Sets the initial values for all the elements in the webpage */
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +19,7 @@ body {
   line-height: 1.5;
 }
 
+/* Removes the margin for all the heading elements */
 h1,
 h2,
 h3,
@@ -26,10 +29,12 @@ h6 {
   margin: 0;
 }
 
+/* Removes the margin for all the paragraph elements */
 p {
   margin: 0;
 }
 
+/* Uses flexbox to position the main heading element and the element containing the links to different sections of the website. */
 .mainHeader {
   display: flex;
   flex-direction: row;
@@ -37,6 +42,7 @@ p {
   background-color: var(--headingBgColor);
 }
 
+/* Positioning and applying the appropriate styles to the portfolio owner's name at the top of web page. */
 h1 {
   background-color: var(--pageThemeColor);
   padding: 2px 10px 2px 40px;
@@ -44,6 +50,7 @@ h1 {
   border-radius: 0px 5px 5px 0px;
 }
 
+/* This selector targets the list of navigation links at the top of page. These links are used to go to different sections of the web page. */
 .mainHeader ul {
   display: flex;
   flex-direction: row;
@@ -52,6 +59,7 @@ h1 {
   margin: 36px 10px 0px 10px;
 }
 
+/* All the links in the main header are targeted to style them with the required properties to match the theme of the header. */
 li a {
   text-decoration: none;
   margin: 8px;
@@ -59,7 +67,9 @@ li a {
   color: var(--pageThemeColor);
 }
 
+/* This class contains the profile picture image and the subtitle. The class selector is a flexbox used to display the contents as flex-items to position them evenly. */
 .hero-banner {
+  /* This property sets the background image. */
   background: url(../images/02-hero-bg.jpg);
   background-position: center;
   background-size: cover;
@@ -76,12 +86,17 @@ li a {
   border-radius: 30px;
 }
 
+/* Used for targeting the subtitle element. */
 .hero-banner h2 {
   background-color: var(--pageThemeColor);
   padding: 5px 10px;
   border-radius: 10px;
 }
 
+/* This page-wrapper class is used to display the section elements as grid template.
+    About section takes 1 fraction of the total height
+    Work section takes up 4 fractions of the total height
+    Contact section takes up 0.5 fractions of the total height */
 .page-wrapper {
   width: 90%;
   display: grid;
@@ -92,23 +107,32 @@ li a {
                         "contact-section";
 }
 
+/* Setting the grid area for About section. */
 #about {
   grid-area: about-section;
 }
 
+/* Setting the grid area for Work section. */
 #work {
   grid-area: work-section;
 }
 
+/* Setting the grid area for Contact section. */
 #contact {
   grid-area: contact-section;
 }
+
+/* This class targets each section to display the elements within it as grid.
+    The heading element takes up 1fraction of the total width.
+    The content takes up 3 fractions of the total width. */
 .page-section {
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 15px 10px 35px 15px;
+  padding-top: 10px;
 }
 
+/* This is targeting the heading tag in each section. */
 .page-section h2 {
   border-right: solid 5px var(--sectionHeadingTheme);
   text-align: right;
@@ -117,9 +141,14 @@ li a {
   color: var(--sectionHeadingTheme);
 }
 
-.content p {
-  margin: 2px;
+/* In the about section the paragraph element is reverting to the original margin value. As this value is set to zero in the beginning of this style page. */
+#about .content p {
+  margin: revert;
 }
+
+/* Creating another nested grid to display the different works in the portfolio.
+    The first work takes up 50% of the overall space.
+    The rest of the space is distributed equally among the remaining work spaces */
 #work .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,32 +160,37 @@ li a {
   grid-gap: 15px;
 }
 
+/* Setting the grid area and background image for the first work. */
 #work1 {
   grid-area: first-work;
   background-image: url(../images/prework-study-guide.png);
-  /*padding: 180px 520px 20px 0px;*/
 }
 
+/* Setting the grid area and background image for the second work. */
 #work2 {
   grid-area: second-work;
   background-image: url(../images/css-snippet-project.png);
 }
 
+/* Setting the grid area and background image for the third work. */
 #work3 {
   grid-area: third-work;
   background-image: url(../images/02-portfolio-3.jpg);
 }
 
+/* Setting the grid area and background image for the fourth work. */
 #work4 {
   grid-area: fourth-work;
   background-image: url(../images/02-portfolio-3.jpg);
 }
 
+/* Setting the grid area and background image for the fifth work. */
 #work5 {
   grid-area: fifth-work;
   background-image: url(../images/02-portfolio-3.jpg);
 }
 
+/* Sets the background and position properties for all the different work sections. */
 .work-bg {
   background-position: center;
   background-size: cover;
@@ -171,10 +205,12 @@ li a {
   text-decoration: none;
 }
 
+/* The box-shadow property set previously is removed when the mouse hovers over the work space. */
 .work-bg:hover {
   box-shadow: none;
 }
 
+/* Sets the background for the label of each work to make it more clear and readable. */
 .work-label {
   background-color: var(--pageThemeColor);
   padding: 5px 10px;
@@ -183,10 +219,12 @@ li a {
   cursor: pointer;
 }
 
+/* Making the font-size of paragraph element smaller in the label */
 .work-label p {
   font-size: x-small;
 }
 
+/* Displays the contents of contact section as flex in horizontal direction. */
 #contact .content {
   display: flex;
   flex-direction: row;
@@ -197,10 +235,12 @@ li a {
   text-decoration: none;
 }
 
+/* The phone number and email id can be selected as a whole text in one click, which is helpful for user to copy text. */
 .textAddress {
   user-select: all;
 }
 
+/* Using this break point to slightly increase the width of contents to fit with more spacing on the page. */
 @media screen and (max-width: 800px) {
   .page-wrapper {
     width: 95%;
@@ -209,20 +249,23 @@ li a {
 
 @media only screen and (max-width: 830px) {
 
+  /* Increasing the width of all sections to fit the screen. */
   .page-wrapper {
     width: 100%;
   }
 
+  /* Changing the flex direction, to align horizontally aligned items vertically. */
   .mainHeader {
     flex-direction: column;
-    align-items: stretch;
     text-align: center;
   }
 
+  /* Changing margin value of the links to go back to previous value. */
   .mainHeader ul{
     margin: revert;
   }
 
+  /* Changing horizontally aligned items to be aligned vertically. */
   .hero-banner {
     flex-direction: column;
     align-items: center;
@@ -231,12 +274,14 @@ li a {
 
 @media only screen and (max-width: 600px) {
   
+  /* Changing the grid-layout for all the sections from 2 columns to 1 column. This will give a right size to elements while viewing on smaller screens. */
   .page-section {
     grid-template-columns: 1fr;
     grid-template-rows: 50px 1fr;
     margin: 20px 10px;
   }
 
+  /* The heading element for the sections need to be changed as its position is changed from side to top. */
   .page-section h2{
     margin: 0;
     margin-bottom: 10px;
@@ -248,6 +293,8 @@ li a {
 }
 
 @media only screen and (max-width: 480px) {
+
+  /* The grid areas are changed for all the work sections to occupy 100% width. */
   #work .content {
     grid-template-rows: 1fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr;
     grid-template-areas: "first-work first-work"
@@ -256,9 +303,9 @@ li a {
                           "third-work third-work"
                           "fourth-work fourth-work"
                           "fifth-work fifth-work";
-    grid-gap: 15px;
   }
 
+  /* Changing horizontally aligned contact information to be aligned vertically. */
   #contact .content {
     flex-direction: column;
   }
