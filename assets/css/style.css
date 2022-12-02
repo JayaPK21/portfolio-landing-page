@@ -1,3 +1,11 @@
+:root {
+  --headingBgColor: #332d2d;
+  --pageThemeColor: #9ea5ed;
+  --themeColor40percent: rgba(158, 165, 237, 0.4);
+  --themeColor60percent: rgba(158, 165, 237, 0.6);
+  --sectionHeadingTheme: #3d416f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,11 +34,11 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #332d2d;
+  background-color: var(--headingBgColor);
 }
 
 h1 {
-  background-color: #9ea5ed;
+  background-color: var(--pageThemeColor);
   padding: 2px 10px 2px 40px;
   margin: 10px 0px;
   border-radius: 0px 5px 5px 0px;
@@ -48,14 +56,14 @@ li a {
   text-decoration: none;
   margin: 8px;
   border-bottom: 3px solid;
-  color: #9ea5ed;
+  color: var(--pageThemeColor);
 }
 
 .hero-banner {
   background: url(../images/02-hero-bg.jpg);
   background-position: center;
   background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(158, 165, 237, 0.4);
+  box-shadow: inset 0 0 0 1000px var(--themeColor40percent);
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -69,7 +77,7 @@ li a {
 }
 
 .hero-banner h2 {
-  background-color: #9ea5ed;
+  background-color: var(--pageThemeColor);
   padding: 5px 10px;
   border-radius: 10px;
 }
@@ -102,11 +110,11 @@ li a {
 }
 
 .page-section h2 {
-  border-right: solid 5px #3d416f;
+  border-right: solid 5px var(--sectionHeadingTheme);
   text-align: right;
   margin-right: 10px;
   padding-right: 10px;
-  color: #3d416f;
+  color: var(--sectionHeadingTheme);
 }
 
 .content p {
@@ -153,13 +161,13 @@ li a {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 3px solid #9ea5ed;
+  border: 3px solid var(--pageThemeColor);
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: end;
   padding: 1em 0;
-  box-shadow: inset 0 0 0 300px rgba(158, 165, 237, 0.6);
+  box-shadow: inset 0 0 0 300px var(--themeColor60percent);
   text-decoration: none;
 }
 
@@ -168,7 +176,7 @@ li a {
 }
 
 .work-label {
-  background-color: #9ea5ed;
+  background-color: var(--pageThemeColor);
   padding: 5px 10px;
   border-radius: 0px 10px 10px 0px;
   line-height: 1.2;
@@ -234,7 +242,7 @@ li a {
     margin-bottom: 10px;
     padding: 0;
     text-align: center;
-    background-color: #3d416f;
+    background-color: var(--sectionHeadingTheme);
     color: white;
   }
 }
